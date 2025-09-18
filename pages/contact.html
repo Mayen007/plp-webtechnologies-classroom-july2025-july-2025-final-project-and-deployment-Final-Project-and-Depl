@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contact the artist for commission inquiries, exhibition opportunities, or general questions about contemporary artwork."
+      content="Visit Lumina Gallery or contact us for exhibition information, private viewings, art purchases, or general inquiries about our contemporary art collection."
     />
     <meta
       name="keywords"
       content="contact artist, art commissions, gallery inquiries, contemporary art contact"
     />
 
-    <title>Contact | Art Gallery</title>
+    <title>Contact | Lumina Gallery</title>
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,8 +40,12 @@
           <div class="nav-wrapper">
             <!-- Logo/Brand -->
             <div class="nav-brand">
-              <a href="../index.html" class="brand-link">
-                <h1 class="brand-name">Artist Name</h1>
+              <a
+                href="../index.html"
+                class="brand-link"
+                aria-label="Lumina Art Gallery - Home"
+              >
+                <h1 class="brand-name">Lumina Gallery</h1>
               </a>
             </div>
 
@@ -91,12 +95,12 @@
     <!-- Main Content -->
     <main class="main-content">
       <!-- Page Header -->
-      <section class="page-header">
+      <section class="page-header" aria-labelledby="contact-main-title">
         <div class="container">
           <div class="header-content">
-            <h1 class="page-title">Contact</h1>
+            <h1 id="contact-main-title" class="page-title">Visit & Contact</h1>
             <p class="page-subtitle">
-              Get in touch for commissions, exhibitions, or general inquiries
+              Plan your visit or get in touch with our gallery team
             </p>
           </div>
         </div>
@@ -108,70 +112,82 @@
           <div class="contact-content two-column">
             <!-- Contact Information -->
             <div class="contact-info">
-              <h2 class="section-title">Let's Connect</h2>
+              <h2 class="section-title">Visit Lumina Gallery</h2>
               <p class="contact-description">
-                I'd love to hear from you! Whether you're interested in
-                commissioning a piece, discussing exhibition opportunities, or
-                simply want to learn more about my work, please don't hesitate
-                to reach out.
+                We welcome art enthusiasts, collectors, and curious visitors.
+                Contact us to schedule a private viewing, inquire about artwork,
+                or learn more about our upcoming exhibitions.
               </p>
 
               <div class="contact-details">
                 <div class="contact-item">
-                  <h3 class="contact-label">Email</h3>
+                  <h3 class="contact-label">Gallery Address</h3>
                   <p class="contact-value">
-                    <a href="mailto:artist@artgallery.com"
-                      >artist@artgallery.com</a
+                    Lumina Gallery<br />
+                    742 Arts Quarter<br />
+                    Downtown Cultural District<br />
+                    Metropolitan City, MC 10001
+                  </p>
+                </div>
+
+                <div class="contact-item">
+                  <h3 class="contact-label">Contact Information</h3>
+                  <p class="contact-value">
+                    Phone: <a href="tel:+15551234567">(555) 123-4567</a><br />
+                    Email:
+                    <a href="mailto:info@luminagallery.com"
+                      >info@luminagallery.com</a
                     >
                   </p>
                 </div>
 
                 <div class="contact-item">
-                  <h3 class="contact-label">Studio Location</h3>
+                  <h3 class="contact-label">Gallery Hours</h3>
                   <p class="contact-value">
-                    Downtown Arts District<br />
-                    123 Creative Avenue<br />
-                    Art City, AC 12345
+                    Tuesday - Thursday: 10:00 AM - 7:00 PM<br />
+                    Friday - Saturday: 10:00 AM - 9:00 PM<br />
+                    Sunday: 12:00 PM - 6:00 PM<br />
+                    <em>Closed Mondays</em>
                   </p>
                 </div>
 
                 <div class="contact-item">
-                  <h3 class="contact-label">Studio Hours</h3>
+                  <h3 class="contact-label">Private Viewings</h3>
                   <p class="contact-value">
-                    By appointment only<br />
-                    Tuesday - Saturday<br />
-                    10:00 AM - 6:00 PM
-                  </p>
-                </div>
-
-                <div class="contact-item">
-                  <h3 class="contact-label">Response Time</h3>
-                  <p class="contact-value">
-                    I typically respond to inquiries<br />
-                    within 24-48 hours.
+                    Available by appointment<br />
+                    Contact us to arrange a<br />
+                    personalized gallery experience.
                   </p>
                 </div>
               </div>
 
               <!-- Social Media Links -->
               <div class="social-media">
-                <h3 class="contact-label">Follow My Work</h3>
+                <h3 class="contact-label">Follow Lumina Gallery</h3>
                 <div class="social-links-expanded">
-                  <a href="#" class="social-link-item" aria-label="Instagram">
+                  <a
+                    href="#"
+                    class="social-link-item"
+                    aria-label="Instagram - @luminagallery"
+                  >
                     <span class="social-icon">📷</span>
-                    <span class="social-text">Instagram</span>
+                    <span class="social-text">@luminagallery</span>
                   </a>
-                  <a href="#" class="social-link-item" aria-label="Facebook">
+                  <a
+                    href="#"
+                    class="social-link-item"
+                    aria-label="Facebook - Lumina Gallery"
+                  >
                     <span class="social-icon">👥</span>
                     <span class="social-text">Facebook</span>
                   </a>
-                  <a href="#" class="social-link-item" aria-label="Twitter">
-                    <span class="social-icon">🐦</span>
-                    <span class="social-text">Twitter</span>
-                  </a>
-                  <a href="#" class="social-link-item" aria-label="LinkedIn">
-                    <span class="social-icon">💼</span>
-                    <span class="social-text">LinkedIn</span>
+                  <a
+                    href="#"
+                    class="social-link-item"
+                    aria-label="Newsletter signup"
+                  >
+                    <span class="social-icon">�</span>
+                    <span class="social-text">Newsletter</span>
                   </a>
                 </div>
               </div>
@@ -180,7 +196,12 @@
             <!-- Contact Form -->
             <div class="contact-form-section">
               <h2 class="section-title">Send a Message</h2>
-              <form id="contact-form" class="contact-form" novalidate>
+              <form
+                id="contact-form"
+                class="contact-form"
+                novalidate
+                aria-label="Contact form"
+              >
                 <div class="form-group">
                   <label for="name" class="form-label">Full Name *</label>
                   <input
@@ -189,8 +210,13 @@
                     name="name"
                     class="form-input"
                     required
+                    minlength="2"
+                    maxlength="50"
                     placeholder="Your full name"
+                    aria-describedby="name-error"
+                    autocomplete="name"
                   />
+                  <span id="name-error" class="form-error" role="alert"></span>
                 </div>
 
                 <div class="form-group">
@@ -202,7 +228,10 @@
                     class="form-input"
                     required
                     placeholder="your.email@example.com"
+                    aria-describedby="email-error"
+                    autocomplete="email"
                   />
+                  <span id="email-error" class="form-error" role="alert"></span>
                 </div>
 
                 <div class="form-group">
@@ -213,6 +242,8 @@
                     name="phone"
                     class="form-input"
                     placeholder="(555) 123-4567"
+                    pattern="[0-9\s\(\)\-\+]*"
+                    autocomplete="tel"
                   />
                 </div>
 
@@ -223,15 +254,25 @@
                     name="subject"
                     class="form-input"
                     required
+                    aria-describedby="subject-error"
                   >
-                    <option value="">Select a subject</option>
-                    <option value="commission">Commission Inquiry</option>
-                    <option value="exhibition">Exhibition Opportunity</option>
-                    <option value="purchase">Artwork Purchase</option>
-                    <option value="collaboration">Collaboration</option>
-                    <option value="press">Press/Media Inquiry</option>
+                    <option value="">Select your inquiry type</option>
+                    <option value="artwork-purchase">Artwork Purchase</option>
+                    <option value="private-viewing">
+                      Private Viewing Request
+                    </option>
+                    <option value="exhibition-info">
+                      Exhibition Information
+                    </option>
+                    <option value="artist-inquiry">Artist Submission</option>
+                    <option value="press-media">Press & Media</option>
                     <option value="general">General Question</option>
                   </select>
+                  <span
+                    id="subject-error"
+                    class="form-error"
+                    role="alert"
+                  ></span>
                 </div>
 
                 <div class="form-group">
@@ -241,9 +282,17 @@
                     name="message"
                     class="form-textarea"
                     required
-                    placeholder="Please share details about your inquiry, including any specific requirements, timeline, or questions you may have..."
+                    minlength="10"
+                    maxlength="1000"
+                    placeholder="Please share details about your inquiry, including any specific artworks of interest, preferred visit times, or questions about our collection..."
                     rows="6"
+                    aria-describedby="message-error"
                   ></textarea>
+                  <span
+                    id="message-error"
+                    class="form-error"
+                    role="alert"
+                  ></span>
                 </div>
 
                 <div class="form-group">
@@ -405,9 +454,9 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h3 class="footer-title">Art Gallery</h3>
+            <h3 class="footer-title">Lumina Gallery</h3>
             <p class="footer-description">
-              Contemporary art and creative expression
+              Illuminating contemporary art and creative expression since 2015
             </p>
           </div>
 
@@ -434,7 +483,9 @@
         </div>
 
         <div class="footer-bottom">
-          <p class="copyright">&copy; 2024 Art Gallery. All rights reserved.</p>
+          <p class="copyright">
+            &copy; 2025 Lumina Gallery. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

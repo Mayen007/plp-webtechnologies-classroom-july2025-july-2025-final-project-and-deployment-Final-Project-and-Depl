@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Browse the complete art gallery collection featuring contemporary paintings, mixed media, and digital artwork."
+      content="Explore Lumina Gallery's complete art collection featuring contemporary paintings, sculptures, mixed media, and digital artwork from talented artists."
     />
     <meta
       name="keywords"
       content="art gallery, paintings, contemporary art, artwork collection, artist portfolio"
     />
 
-    <title>Gallery - Art Collection | Art Gallery</title>
+    <title>Gallery - Art Collection | Lumina Gallery</title>
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,8 +40,12 @@
           <div class="nav-wrapper">
             <!-- Logo/Brand -->
             <div class="nav-brand">
-              <a href="../index.html" class="brand-link">
-                <h1 class="brand-name">Artist Name</h1>
+              <a
+                href="../index.html"
+                class="brand-link"
+                aria-label="Lumina Art Gallery - Home"
+              >
+                <h1 class="brand-name">Lumina Gallery</h1>
               </a>
             </div>
 
@@ -91,34 +95,71 @@
     <!-- Main Content -->
     <main class="main-content">
       <!-- Page Header -->
-      <section class="page-header">
+      <section class="page-header" aria-labelledby="gallery-main-title">
         <div class="container">
           <div class="header-content">
-            <h1 class="page-title">Gallery</h1>
+            <h1 id="gallery-main-title" class="page-title">Art Collection</h1>
             <p class="page-subtitle">
-              A curated collection of contemporary artwork
+              Discover our carefully curated selection of contemporary artworks
+              from talented artists around the world
             </p>
           </div>
         </div>
       </section>
 
       <!-- Gallery Filters -->
-      <section class="gallery-filters">
+      <section class="gallery-filters" aria-label="Filter artwork by category">
         <div class="container">
-          <div class="filter-controls">
-            <button class="filter-btn active" data-filter="all">
+          <div
+            class="filter-controls"
+            role="tablist"
+            aria-label="Artwork categories"
+          >
+            <button
+              class="filter-btn active"
+              data-filter="all"
+              role="tab"
+              aria-selected="true"
+              aria-controls="gallery-grid"
+            >
               All Artwork
             </button>
-            <button class="filter-btn" data-filter="paintings">
+            <button
+              class="filter-btn"
+              data-filter="paintings"
+              role="tab"
+              aria-selected="false"
+              aria-controls="gallery-grid"
+            >
               Paintings
             </button>
-            <button class="filter-btn" data-filter="mixed-media">
+            <button
+              class="filter-btn"
+              data-filter="mixed-media"
+              role="tab"
+              aria-selected="false"
+              aria-controls="gallery-grid"
+            >
               Mixed Media
             </button>
-            <button class="filter-btn" data-filter="digital">
+            <button
+              class="filter-btn"
+              data-filter="digital"
+              role="tab"
+              aria-selected="false"
+              aria-controls="gallery-grid"
+            >
               Digital Art
             </button>
-            <button class="filter-btn" data-filter="drawings">Drawings</button>
+            <button
+              class="filter-btn"
+              data-filter="sculptures"
+              role="tab"
+              aria-selected="false"
+              aria-controls="gallery-grid"
+            >
+              Sculptures
+            </button>
           </div>
         </div>
       </section>
@@ -126,18 +167,21 @@
       <!-- Gallery Grid -->
       <section class="gallery-section">
         <div class="container">
-          <div class="gallery-grid">
+          <div id="gallery-grid" class="gallery-grid" role="tabpanel">
             <!-- Artwork Item 1 -->
             <article class="gallery-item" data-category="paintings">
               <div class="gallery-image-wrapper">
                 <img
                   src="../images/gallery/artwork-1.jpg"
-                  alt="Abstract Composition #1"
+                  alt="Ethereal Waves - Abstract painting with flowing blue and silver forms suggesting ocean movement and light reflection"
                   class="gallery-image"
+                  loading="lazy"
                 />
                 <div class="gallery-overlay">
-                  <h3 class="gallery-title">Abstract Composition #1</h3>
+                  <h3 class="gallery-title">Ethereal Waves</h3>
+                  <p class="gallery-artist">Sarah Chen</p>
                   <p class="gallery-meta">Acrylic on Canvas, 24" x 36", 2024</p>
+                  <p class="gallery-price">$1,200</p>
                 </div>
               </div>
             </article>
@@ -147,12 +191,15 @@
               <div class="gallery-image-wrapper">
                 <img
                   src="../images/gallery/artwork-2.jpg"
-                  alt="Urban Reflections"
+                  alt="Urban Fragments - Mixed media collage incorporating newspaper clippings, acrylic paint, and metal elements depicting modern city life"
                   class="gallery-image"
+                  loading="lazy"
                 />
                 <div class="gallery-overlay">
-                  <h3 class="gallery-title">Urban Reflections</h3>
+                  <h3 class="gallery-title">Urban Fragments</h3>
+                  <p class="gallery-artist">Marcus Rodriguez</p>
                   <p class="gallery-meta">Mixed Media, 20" x 30", 2024</p>
+                  <p class="gallery-price">$950</p>
                 </div>
               </div>
             </article>
@@ -162,12 +209,15 @@
               <div class="gallery-image-wrapper">
                 <img
                   src="../images/gallery/artwork-3.jpg"
-                  alt="Nature's Symphony"
+                  alt="Golden Hour Garden - Oil painting of sunlit flowers and foliage in warm, impressionistic style with golden light filtering through leaves"
                   class="gallery-image"
+                  loading="lazy"
                 />
                 <div class="gallery-overlay">
-                  <h3 class="gallery-title">Nature's Symphony</h3>
+                  <h3 class="gallery-title">Golden Hour Garden</h3>
+                  <p class="gallery-artist">Elena Vasquez</p>
                   <p class="gallery-meta">Oil on Canvas, 30" x 40", 2024</p>
+                  <p class="gallery-price">$1,800</p>
                 </div>
               </div>
             </article>
@@ -177,27 +227,35 @@
               <div class="gallery-image-wrapper">
                 <img
                   src="../images/gallery/artwork-4.jpg"
-                  alt="Digital Dreams"
+                  alt="Neon Metropolis - Digital artwork featuring futuristic cityscape with vibrant neon colors and cyberpunk aesthetic"
                   class="gallery-image"
+                  loading="lazy"
                 />
                 <div class="gallery-overlay">
-                  <h3 class="gallery-title">Digital Dreams</h3>
-                  <p class="gallery-meta">Digital Art, 2024</p>
+                  <h3 class="gallery-title">Neon Metropolis</h3>
+                  <p class="gallery-artist">Alex Kim</p>
+                  <p class="gallery-meta">Digital Art, 16" x 24" Print, 2024</p>
+                  <p class="gallery-price">$750</p>
                 </div>
               </div>
             </article>
 
             <!-- Artwork Item 5 -->
-            <article class="gallery-item" data-category="drawings">
+            <article class="gallery-item" data-category="sculptures">
               <div class="gallery-image-wrapper">
                 <img
                   src="../images/gallery/artwork-5.jpg"
-                  alt="Pencil Study #3"
+                  alt="Flowing Forms - Contemporary bronze sculpture with organic curves representing movement and grace"
                   class="gallery-image"
+                  loading="lazy"
                 />
                 <div class="gallery-overlay">
-                  <h3 class="gallery-title">Pencil Study #3</h3>
-                  <p class="gallery-meta">Graphite on Paper, 12" x 16", 2024</p>
+                  <h3 class="gallery-title">Flowing Forms</h3>
+                  <p class="gallery-artist">David Chen</p>
+                  <p class="gallery-meta">
+                    Bronze Sculpture, 18" H x 12" W, 2024
+                  </p>
+                  <p class="gallery-price">$2,400</p>
                 </div>
               </div>
             </article>
@@ -207,12 +265,15 @@
               <div class="gallery-image-wrapper">
                 <img
                   src="../images/gallery/artwork-6.jpg"
-                  alt="Color Exploration"
+                  alt="Crimson Sunset - Bold abstract painting with sweeping crimson and orange brushstrokes against deep purple background"
                   class="gallery-image"
+                  loading="lazy"
                 />
                 <div class="gallery-overlay">
-                  <h3 class="gallery-title">Color Exploration</h3>
+                  <h3 class="gallery-title">Crimson Sunset</h3>
+                  <p class="gallery-artist">Maria Santos</p>
                   <p class="gallery-meta">Acrylic on Canvas, 18" x 24", 2024</p>
+                  <p class="gallery-price">$890</p>
                 </div>
               </div>
             </article>
@@ -222,12 +283,15 @@
               <div class="gallery-image-wrapper">
                 <img
                   src="../images/gallery/artwork-7.jpg"
-                  alt="Textural Elements"
+                  alt="Memory Traces - Mixed media artwork incorporating vintage photographs, fabric, and paint exploring themes of nostalgia"
                   class="gallery-image"
+                  loading="lazy"
                 />
                 <div class="gallery-overlay">
-                  <h3 class="gallery-title">Textural Elements</h3>
+                  <h3 class="gallery-title">Memory Traces</h3>
+                  <p class="gallery-artist">Jennifer Park</p>
                   <p class="gallery-meta">Mixed Media, 22" x 28", 2023</p>
+                  <p class="gallery-price">$1,100</p>
                 </div>
               </div>
             </article>
@@ -265,9 +329,9 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h3 class="footer-title">Art Gallery</h3>
+            <h3 class="footer-title">Lumina Gallery</h3>
             <p class="footer-description">
-              Contemporary art and creative expression
+              Illuminating contemporary art and creative expression since 2015
             </p>
           </div>
 
@@ -294,7 +358,9 @@
         </div>
 
         <div class="footer-bottom">
-          <p class="copyright">&copy; 2024 Art Gallery. All rights reserved.</p>
+          <p class="copyright">
+            &copy; 2025 Lumina Gallery. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

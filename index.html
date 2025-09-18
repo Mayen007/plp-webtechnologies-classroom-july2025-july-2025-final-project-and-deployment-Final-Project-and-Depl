@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contemporary art gallery showcasing original artwork, paintings, and creative expressions by emerging artist."
+      content="Lumina Gallery showcases contemporary art, paintings, and creative expressions by emerging and established artists. Visit our collection and exhibitions."
     />
     <meta
       name="keywords"
@@ -13,7 +13,7 @@
     />
     <meta name="author" content="Art Gallery" />
 
-    <title>Art Gallery - Contemporary Art & Creative Expression</title>
+    <title>Lumina Gallery - Contemporary Art & Creative Expression</title>
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,8 +41,12 @@
           <div class="nav-wrapper">
             <!-- Logo/Brand -->
             <div class="nav-brand">
-              <a href="index.html" class="brand-link">
-                <h1 class="brand-name">Artist Name</h1>
+              <a
+                href="index.html"
+                class="brand-link"
+                aria-label="Lumina Art Gallery - Home"
+              >
+                <h1 class="brand-name">Lumina Gallery</h1>
               </a>
             </div>
 
@@ -95,24 +99,33 @@
     <!-- Main Content -->
     <main class="main-content">
       <!-- Hero Section -->
-      <section class="hero-section">
+      <section class="hero-section" aria-labelledby="hero-title">
         <div class="container">
           <div class="hero-content">
             <div class="hero-image">
               <img
                 src="images/gallery/hero-artwork.jpg"
-                alt="Featured Artwork"
+                alt="Abstract contemporary painting with vibrant blues and golds, representing the artistic vision of Lumina Gallery"
                 class="hero-artwork"
+                loading="eager"
               />
             </div>
             <div class="hero-text">
-              <h2 class="hero-title">Contemporary Art & Creative Expression</h2>
+              <h2 id="hero-title" class="hero-title">
+                Where Art Comes to Life
+              </h2>
               <p class="hero-description">
-                Exploring the boundaries of artistic expression through
-                contemporary paintings, mixed media, and innovative creative
-                techniques.
+                Discover extraordinary contemporary art that challenges
+                conventions and inspires new perspectives. From emerging talents
+                to established masters, explore our curated collection of
+                paintings, sculptures, and mixed media works.
               </p>
-              <a href="gallery.html" class="btn btn-primary">Explore Gallery</a>
+              <a
+                href="pages/gallery.html"
+                class="btn btn-primary"
+                aria-describedby="hero-title"
+                >Explore Gallery</a
+              >
             </div>
           </div>
         </div>
@@ -134,12 +147,16 @@
               <div class="gallery-image-wrapper">
                 <img
                   src="images/gallery/featured-1.jpg"
-                  alt="Abstract Composition #1"
+                  alt="Ethereal Waves - Abstract painting with flowing blue and silver forms suggesting ocean movement"
                   class="gallery-image"
+                  loading="lazy"
                 />
                 <div class="gallery-overlay">
-                  <h3 class="gallery-title">Abstract Composition #1</h3>
-                  <p class="gallery-meta">Acrylic on Canvas, 2024</p>
+                  <h3 class="gallery-title">Ethereal Waves</h3>
+                  <p class="gallery-meta">
+                    Sarah Chen • Acrylic on Canvas, 2024
+                  </p>
+                  <p class="gallery-price">$1,200</p>
                 </div>
               </div>
             </article>
@@ -149,12 +166,16 @@
               <div class="gallery-image-wrapper">
                 <img
                   src="images/gallery/featured-2.jpg"
-                  alt="Urban Reflections"
+                  alt="Urban Fragments - Mixed media collage incorporating newspaper, paint, and metal elements depicting city life"
                   class="gallery-image"
+                  loading="lazy"
                 />
                 <div class="gallery-overlay">
-                  <h3 class="gallery-title">Urban Reflections</h3>
-                  <p class="gallery-meta">Mixed Media, 2024</p>
+                  <h3 class="gallery-title">Urban Fragments</h3>
+                  <p class="gallery-meta">
+                    Marcus Rodriguez • Mixed Media, 2024
+                  </p>
+                  <p class="gallery-price">$950</p>
                 </div>
               </div>
             </article>
@@ -164,12 +185,16 @@
               <div class="gallery-image-wrapper">
                 <img
                   src="images/gallery/featured-3.jpg"
-                  alt="Nature's Symphony"
+                  alt="Golden Hour Garden - Oil painting of sunlit flowers in warm, impressionistic style"
                   class="gallery-image"
+                  loading="lazy"
                 />
                 <div class="gallery-overlay">
-                  <h3 class="gallery-title">Nature's Symphony</h3>
-                  <p class="gallery-meta">Oil on Canvas, 2024</p>
+                  <h3 class="gallery-title">Golden Hour Garden</h3>
+                  <p class="gallery-meta">
+                    Elena Vasquez • Oil on Canvas, 2024
+                  </p>
+                  <p class="gallery-price">$1,800</p>
                 </div>
               </div>
             </article>
@@ -179,49 +204,101 @@
               <div class="gallery-image-wrapper">
                 <img
                   src="images/gallery/featured-4.jpg"
-                  alt="Digital Dreams"
+                  alt="Neon Metropolis - Digital artwork featuring futuristic cityscape with vibrant neon colors"
                   class="gallery-image"
+                  loading="lazy"
                 />
                 <div class="gallery-overlay">
-                  <h3 class="gallery-title">Digital Dreams</h3>
-                  <p class="gallery-meta">Digital Art, 2024</p>
+                  <h3 class="gallery-title">Neon Metropolis</h3>
+                  <p class="gallery-meta">Alex Kim • Digital Art, 2024</p>
+                  <p class="gallery-price">$750</p>
                 </div>
               </div>
             </article>
           </div>
 
           <div class="section-cta">
-            <a href="gallery.html" class="btn btn-secondary"
+            <a href="pages/gallery.html" class="btn btn-secondary"
               >View All Artwork</a
             >
           </div>
         </div>
       </section>
 
-      <!-- Artist Introduction Section -->
-      <section class="artist-intro">
+      <!-- Gallery Introduction Section -->
+      <section class="artist-intro" aria-labelledby="gallery-intro-title">
         <div class="container">
           <div class="intro-content two-column">
             <div class="intro-text">
-              <h2 class="section-title">About the Artist</h2>
+              <h2 id="gallery-intro-title" class="section-title">
+                Welcome to Lumina Gallery
+              </h2>
               <p>
-                Passionate about exploring the intersection of traditional
-                techniques and contemporary themes, I create artwork that speaks
-                to the human experience in our modern world.
+                Since 2015, Lumina Gallery has been a beacon for contemporary
+                art in the heart of the city. We showcase exceptional works from
+                both emerging and established artists, creating a dynamic space
+                where creativity flourishes.
               </p>
               <p>
-                Each piece is a journey of discovery, blending colors, textures,
-                and emotions to create visual narratives that resonate with
-                viewers on multiple levels.
+                Our carefully curated exhibitions feature diverse artistic
+                expressions—from traditional paintings to cutting-edge digital
+                art—offering visitors a journey through the evolving landscape
+                of contemporary creativity.
               </p>
-              <a href="about.html" class="btn btn-secondary">Learn More</a>
+              <a href="pages/about.html" class="btn btn-secondary">Our Story</a>
             </div>
             <div class="intro-image">
               <img
-                src="images/artist-photo.jpg"
-                alt="Artist at work in studio"
+                src="images/gallery-interior.jpg"
+                alt="Lumina Gallery interior showing white walls with carefully arranged contemporary artworks and professional lighting"
                 class="artist-photo"
+                loading="lazy"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Current Exhibition Section -->
+      <section class="current-exhibition" aria-labelledby="exhibition-title">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="exhibition-title" class="section-title">
+              Current Exhibition
+            </h2>
+            <p class="section-description">Don't miss our featured showcase</p>
+          </div>
+          <div class="exhibition-featured">
+            <div class="exhibition-content">
+              <div class="exhibition-image">
+                <img
+                  src="images/exhibitions/current-exhibition.jpg"
+                  alt="Fragments of Time exhibition featuring abstract sculptures and contemporary installations"
+                  class="exhibition-photo"
+                  loading="lazy"
+                />
+              </div>
+              <div class="exhibition-details">
+                <h3 class="exhibition-name">Fragments of Time</h3>
+                <p class="exhibition-subtitle">
+                  Contemporary Abstractions & Mixed Media
+                </p>
+                <p class="exhibition-dates">September 1 - October 15, 2025</p>
+                <p class="exhibition-description">
+                  A thought-provoking collection exploring the relationship
+                  between memory and perception through innovative artistic
+                  techniques. Features works by 12 contemporary artists working
+                  in diverse media.
+                </p>
+                <div class="exhibition-actions">
+                  <a href="pages/exhibitions.html" class="btn btn-primary"
+                    >View Exhibition</a
+                  >
+                  <a href="pages/gallery.html" class="btn btn-secondary"
+                    >Gallery Tour</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -233,9 +310,9 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h3 class="footer-title">Art Gallery</h3>
+            <h3 class="footer-title">Lumina Gallery</h3>
             <p class="footer-description">
-              Contemporary art and creative expression
+              Illuminating contemporary art and creative expression since 2015
             </p>
           </div>
 
@@ -262,7 +339,9 @@
         </div>
 
         <div class="footer-bottom">
-          <p class="copyright">&copy; 2024 Art Gallery. All rights reserved.</p>
+          <p class="copyright">
+            &copy; 2025 Lumina Gallery. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
