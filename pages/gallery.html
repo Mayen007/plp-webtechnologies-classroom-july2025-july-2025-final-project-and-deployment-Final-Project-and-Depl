@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse the complete art gallery collection featuring contemporary paintings, mixed media, and digital artwork."
+    />
+    <meta
+      name="keywords"
+      content="art gallery, paintings, contemporary art, artwork collection, artist portfolio"
+    />
+
+    <title>Gallery - Art Collection | Art Gallery</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/icons/favicon.ico" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-wrapper">
+            <!-- Logo/Brand -->
+            <div class="nav-brand">
+              <a href="../index.html" class="brand-link">
+                <h1 class="brand-name">Artist Name</h1>
+              </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="exhibitions.html" class="nav-link">Exhibitions</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+          </div>
+
+          <!-- Mobile Navigation -->
+          <div class="mobile-menu">
+            <ul class="mobile-nav-list">
+              <li><a href="../index.html" class="nav-link">Home</a></li>
+              <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+              <li><a href="about.html" class="nav-link">About</a></li>
+              <li>
+                <a href="exhibitions.html" class="nav-link">Exhibitions</a>
+              </li>
+              <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <div class="header-content">
+            <h1 class="page-title">Gallery</h1>
+            <p class="page-subtitle">
+              A curated collection of contemporary artwork
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Filters -->
+      <section class="gallery-filters">
+        <div class="container">
+          <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">
+              All Artwork
+            </button>
+            <button class="filter-btn" data-filter="paintings">
+              Paintings
+            </button>
+            <button class="filter-btn" data-filter="mixed-media">
+              Mixed Media
+            </button>
+            <button class="filter-btn" data-filter="digital">
+              Digital Art
+            </button>
+            <button class="filter-btn" data-filter="drawings">Drawings</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Grid -->
+      <section class="gallery-section">
+        <div class="container">
+          <div class="gallery-grid">
+            <!-- Artwork Item 1 -->
+            <article class="gallery-item" data-category="paintings">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="../images/gallery/artwork-1.jpg"
+                  alt="Abstract Composition #1"
+                  class="gallery-image"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Abstract Composition #1</h3>
+                  <p class="gallery-meta">Acrylic on Canvas, 24" x 36", 2024</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Artwork Item 2 -->
+            <article class="gallery-item" data-category="mixed-media">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="../images/gallery/artwork-2.jpg"
+                  alt="Urban Reflections"
+                  class="gallery-image"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Urban Reflections</h3>
+                  <p class="gallery-meta">Mixed Media, 20" x 30", 2024</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Artwork Item 3 -->
+            <article class="gallery-item" data-category="paintings">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="../images/gallery/artwork-3.jpg"
+                  alt="Nature's Symphony"
+                  class="gallery-image"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Nature's Symphony</h3>
+                  <p class="gallery-meta">Oil on Canvas, 30" x 40", 2024</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Artwork Item 4 -->
+            <article class="gallery-item" data-category="digital">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="../images/gallery/artwork-4.jpg"
+                  alt="Digital Dreams"
+                  class="gallery-image"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Digital Dreams</h3>
+                  <p class="gallery-meta">Digital Art, 2024</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Artwork Item 5 -->
+            <article class="gallery-item" data-category="drawings">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="../images/gallery/artwork-5.jpg"
+                  alt="Pencil Study #3"
+                  class="gallery-image"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Pencil Study #3</h3>
+                  <p class="gallery-meta">Graphite on Paper, 12" x 16", 2024</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Artwork Item 6 -->
+            <article class="gallery-item" data-category="paintings">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="../images/gallery/artwork-6.jpg"
+                  alt="Color Exploration"
+                  class="gallery-image"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Color Exploration</h3>
+                  <p class="gallery-meta">Acrylic on Canvas, 18" x 24", 2024</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Artwork Item 7 -->
+            <article class="gallery-item" data-category="mixed-media">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="../images/gallery/artwork-7.jpg"
+                  alt="Textural Elements"
+                  class="gallery-image"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Textural Elements</h3>
+                  <p class="gallery-meta">Mixed Media, 22" x 28", 2023</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Artwork Item 8 -->
+            <article class="gallery-item" data-category="digital">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="../images/gallery/artwork-8.jpg"
+                  alt="Geometric Patterns"
+                  class="gallery-image"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Geometric Patterns</h3>
+                  <p class="gallery-meta">Digital Art, 2023</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Add more artwork items as needed -->
+          </div>
+
+          <!-- Load More Button -->
+          <div class="gallery-actions">
+            <button class="btn btn-secondary" id="load-more">
+              Load More Artwork
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">Art Gallery</h3>
+            <p class="footer-description">
+              Contemporary art and creative expression
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="exhibitions.html">Exhibitions</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Connect</h4>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Instagram"
+                >Instagram</a
+              >
+              <a href="#" class="social-link" aria-label="Facebook">Facebook</a>
+              <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2024 Art Gallery. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Scripts -->
+    <script src="../js/utils.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

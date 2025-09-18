@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contemporary art gallery showcasing original artwork, paintings, and creative expressions by emerging artist."
+    />
+    <meta
+      name="keywords"
+      content="art, gallery, paintings, contemporary art, artist, artwork, exhibitions"
+    />
+    <meta name="author" content="Art Gallery" />
+
+    <title>Art Gallery - Contemporary Art & Creative Expression</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-wrapper">
+            <!-- Logo/Brand -->
+            <div class="nav-brand">
+              <a href="index.html" class="brand-link">
+                <h1 class="brand-name">Artist Name</h1>
+              </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/gallery.html" class="nav-link">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/about.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/exhibitions.html" class="nav-link"
+                  >Exhibitions</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="pages/contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+          </div>
+
+          <!-- Mobile Navigation -->
+          <div class="mobile-menu">
+            <ul class="mobile-nav-list">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="pages/gallery.html" class="nav-link">Gallery</a></li>
+              <li><a href="pages/about.html" class="nav-link">About</a></li>
+              <li>
+                <a href="pages/exhibitions.html" class="nav-link"
+                  >Exhibitions</a
+                >
+              </li>
+              <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-image">
+              <img
+                src="images/gallery/hero-artwork.jpg"
+                alt="Featured Artwork"
+                class="hero-artwork"
+              />
+            </div>
+            <div class="hero-text">
+              <h2 class="hero-title">Contemporary Art & Creative Expression</h2>
+              <p class="hero-description">
+                Exploring the boundaries of artistic expression through
+                contemporary paintings, mixed media, and innovative creative
+                techniques.
+              </p>
+              <a href="gallery.html" class="btn btn-primary">Explore Gallery</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Works Section -->
+      <section class="featured-works">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Featured Works</h2>
+            <p class="section-description">
+              A curated selection of recent artwork
+            </p>
+          </div>
+
+          <div class="featured-grid">
+            <!-- Featured Artwork Item 1 -->
+            <article class="gallery-item" data-category="paintings">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="images/gallery/featured-1.jpg"
+                  alt="Abstract Composition #1"
+                  class="gallery-image"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Abstract Composition #1</h3>
+                  <p class="gallery-meta">Acrylic on Canvas, 2024</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Featured Artwork Item 2 -->
+            <article class="gallery-item" data-category="mixed-media">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="images/gallery/featured-2.jpg"
+                  alt="Urban Reflections"
+                  class="gallery-image"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Urban Reflections</h3>
+                  <p class="gallery-meta">Mixed Media, 2024</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Featured Artwork Item 3 -->
+            <article class="gallery-item" data-category="paintings">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="images/gallery/featured-3.jpg"
+                  alt="Nature's Symphony"
+                  class="gallery-image"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Nature's Symphony</h3>
+                  <p class="gallery-meta">Oil on Canvas, 2024</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Featured Artwork Item 4 -->
+            <article class="gallery-item" data-category="digital">
+              <div class="gallery-image-wrapper">
+                <img
+                  src="images/gallery/featured-4.jpg"
+                  alt="Digital Dreams"
+                  class="gallery-image"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Digital Dreams</h3>
+                  <p class="gallery-meta">Digital Art, 2024</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="section-cta">
+            <a href="gallery.html" class="btn btn-secondary"
+              >View All Artwork</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Artist Introduction Section -->
+      <section class="artist-intro">
+        <div class="container">
+          <div class="intro-content two-column">
+            <div class="intro-text">
+              <h2 class="section-title">About the Artist</h2>
+              <p>
+                Passionate about exploring the intersection of traditional
+                techniques and contemporary themes, I create artwork that speaks
+                to the human experience in our modern world.
+              </p>
+              <p>
+                Each piece is a journey of discovery, blending colors, textures,
+                and emotions to create visual narratives that resonate with
+                viewers on multiple levels.
+              </p>
+              <a href="about.html" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="intro-image">
+              <img
+                src="images/artist-photo.jpg"
+                alt="Artist at work in studio"
+                class="artist-photo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">Art Gallery</h3>
+            <p class="footer-description">
+              Contemporary art and creative expression
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="pages/gallery.html">Gallery</a></li>
+              <li><a href="pages/about.html">About</a></li>
+              <li><a href="pages/exhibitions.html">Exhibitions</a></li>
+              <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Connect</h4>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Instagram"
+                >Instagram</a
+              >
+              <a href="#" class="social-link" aria-label="Facebook">Facebook</a>
+              <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2024 Art Gallery. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

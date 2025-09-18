@@ -1,0 +1,7 @@
+# Ignore project planning files
+DESIGN_WIREFRAMES.md
+PROJECT_PHASES.md
+PLANNING_DOCUMENT.md
+vscode/
+.idea/
+art-gallery.code-workspace
