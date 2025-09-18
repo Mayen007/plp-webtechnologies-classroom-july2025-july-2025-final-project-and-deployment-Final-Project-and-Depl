@@ -27,8 +27,6 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico" />
@@ -146,9 +144,9 @@
             <article class="gallery-item" data-category="paintings">
               <div class="gallery-image-wrapper">
                 <img
-                  src="images/gallery/featured-1.jpg"
+                  data-src="images/gallery/featured-1.jpg"
                   alt="Ethereal Waves - Abstract painting with flowing blue and silver forms suggesting ocean movement"
-                  class="gallery-image"
+                  class="gallery-image lazy"
                   loading="lazy"
                 />
                 <div class="gallery-overlay">
@@ -350,7 +348,6 @@
     <button class="back-to-top" aria-label="Back to top">↑</button>
 
     <!-- Scripts -->
-    <script src="js/utils.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

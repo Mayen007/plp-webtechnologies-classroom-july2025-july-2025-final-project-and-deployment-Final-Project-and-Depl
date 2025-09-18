@@ -367,3 +367,553 @@ function showFormSuccess(message) {
     successElement.remove();
   }, 5000);
 }
+
+/**
+ * Initialize Animation on Scroll
+ */
+function initializeScrollAnimations() {
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        // Unobserve after animation to improve performance
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  animatedElements.forEach(element => {
+    observer.observe(element);
+  });
+}
+
+/**
+ * Initialize Parallax Effects
+ */
+function initializeParallax() {
+  const parallaxElements = document.querySelectorAll('.parallax-background, .parallax-midground');
+
+  if (parallaxElements.length === 0) return;
+
+  function updateParallax() {
+    const scrollTop = window.pageYOffset;
+
+    parallaxElements.forEach(element => {
+      const speed = element.classList.contains('parallax-background') ? 0.5 : 0.3;
+      const yPos = -(scrollTop * speed);
+      element.style.transform = `translateY(${yPos}px)`;
+    });
+  }
+
+  // Throttle scroll events for better performance
+  let ticking = false;
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    requestTick();
+    ticking = false;
+  });
+}
+
+/**
+ * Initialize Enhanced Gallery Interactions
+ */
+function initializeEnhancedGallery() {
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  galleryItems.forEach(item => {
+    // Add staggered animation delay
+    const index = Array.from(galleryItems).indexOf(item);
+    item.style.animationDelay = `${index * 0.1}s`;
+
+    // Enhanced hover effects
+    item.addEventListener('mouseenter', function () {
+      this.classList.add('hover-lift');
+    });
+
+    item.addEventListener('mouseleave', function () {
+      this.classList.remove('hover-lift');
+    });
+
+    // Add image overlay effect
+    const image = item.querySelector('.gallery-image');
+    if (image) {
+      image.classList.add('image-overlay-effect');
+    }
+  });
+}
+
+/**
+ * Initialize Loading Animations
+ */
+function initializeLoadingStates() {
+  // Simulate loading for images
+  const images = document.querySelectorAll('img');
+
+  images.forEach(img => {
+    if (!img.complete) {
+      img.classList.add('shimmer');
+
+      img.addEventListener('load', function () {
+        this.classList.remove('shimmer');
+        this.classList.add('fade-in');
+      });
+    }
+  });
+}
+
+/**
+ * Initialize Advanced Navigation Effects
+ */
+function initializeAdvancedNavigation() {
+  const header = document.querySelector('.header');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  // Header scroll effect
+  let lastScrollTop = 0;
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+      // Scrolling down
+      header.style.transform = 'translateY(-100%)';
+    } else {
+      // Scrolling up
+      header.style.transform = 'translateY(0)';
+    }
+
+    lastScrollTop = scrollTop;
+  });
+
+  // Enhanced navigation link effects
+  navLinks.forEach(link => {
+    link.addEventListener('mouseenter', function () {
+      this.style.transform = 'translateY(-2px)';
+    });
+
+    link.addEventListener('mouseleave', function () {
+      this.style.transform = 'translateY(0)';
+    });
+  });
+}
+
+/**
+ * Initialize Smooth Page Transitions
+ */
+function initializePageTransitions() {
+  const links = document.querySelectorAll('a[href^="#"]');
+
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+}
+
+/**
+ * Initialize Performance Optimizations
+ */
+function initializePerformanceOptimizations() {
+  // Lazy loading for images
+  if ('IntersectionObserver' in window) {
+    const lazyImages = document.querySelectorAll('img[data-src]');
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    lazyImages.forEach(img => imageObserver.observe(img));
+  }
+
+  // Preload critical resources
+  const criticalImages = [
+    'images/hero-artwork.jpg',
+    'images/gallery/featured-1.jpg'
+  ];
+
+  criticalImages.forEach(src => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = src;
+    document.head.appendChild(link);
+  });
+}
+
+/**
+ * Initialize Enhanced Form Interactions
+ */
+function initializeEnhancedForms() {
+  const formInputs = document.querySelectorAll('.form-input, .form-textarea');
+
+  formInputs.forEach(input => {
+    // Floating label effect
+    input.addEventListener('focus', function () {
+      this.parentNode.classList.add('focused');
+    });
+
+    input.addEventListener('blur', function () {
+      if (!this.value) {
+        this.parentNode.classList.remove('focused');
+      }
+    });
+
+    // Real-time validation feedback
+    input.addEventListener('input', function () {
+      if (this.value) {
+        this.classList.add('has-content');
+      } else {
+        this.classList.remove('has-content');
+      }
+    });
+  });
+}
+
+/**
+ * Initialize all enhanced features
+ */
+function initializeEnhancedFeatures() {
+  initializeScrollAnimations();
+  initializeParallax();
+  initializeEnhancedGallery();
+  initializeLoadingStates();
+  initializeAdvancedNavigation();
+  initializePageTransitions();
+  initializePerformanceOptimizations();
+  initializeEnhancedForms();
+}
+
+// Add enhanced features to the main DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('Art Gallery Website Loaded');
+
+  // Initialize all features
+  initializeNavigation();
+  initializeGallery();
+  initializeForms();
+  initializeScrollEffects();
+
+  // Initialize enhanced features
+  initializeEnhancedFeatures();
+
+  // Initialize utilities and compatibility
+  initializeUtilities();
+  initializeBrowserCompatibility();
+  initializePerformanceFeatures();
+
+  console.log('Enhanced features initialized');
+});
+
+/* ===== UTILITY FUNCTIONS ===== */
+/* (Previously in utils.js) */
+
+/**
+ * Debounce function to limit function calls
+ */
+function debounce(func, wait, immediate) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      timeout = null;
+      if (!immediate) func(...args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func(...args);
+  };
+}
+
+/**
+ * Throttle function to limit function calls
+ */
+function throttle(func, limit) {
+  let inThrottle;
+  return function () {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+}
+
+/**
+ * Check if element is in viewport
+ */
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+/**
+ * Device detection utilities
+ */
+const Device = {
+  isMobile() {
+    return window.innerWidth <= 767;
+  },
+  isTablet() {
+    return window.innerWidth > 767 && window.innerWidth <= 1023;
+  },
+  isDesktop() {
+    return window.innerWidth > 1023;
+  },
+  hasTouch() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  }
+};
+
+/**
+ * Local storage helpers
+ */
+const Storage = {
+  set(key, value) {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch (e) {
+      console.warn('LocalStorage not available:', e);
+    }
+  },
+  get(key) {
+    try {
+      const item = localStorage.getItem(key);
+      return item ? JSON.parse(item) : null;
+    } catch (e) {
+      console.warn('Error reading from LocalStorage:', e);
+      return null;
+    }
+  },
+  remove(key) {
+    try {
+      localStorage.removeItem(key);
+    } catch (e) {
+      console.warn('Error removing from LocalStorage:', e);
+    }
+  }
+};
+
+/**
+ * Initialize utility functions
+ */
+function initializeUtilities() {
+  // Export utilities globally
+  window.Utils = {
+    debounce,
+    throttle,
+    isInViewport,
+    Device,
+    Storage
+  };
+}
+
+/* ===== BROWSER COMPATIBILITY ===== */
+/* (Previously in browser-compat.js) */
+
+/**
+ * Feature Detection
+ */
+const FeatureDetection = {
+  cssGrid: () => CSS.supports('display', 'grid'),
+  flexbox: () => CSS.supports('display', 'flex'),
+  cssVariables: () => window.CSS && CSS.supports('color', 'var(--primary)'),
+  intersectionObserver: () => 'IntersectionObserver' in window,
+  smoothScroll: () => 'scrollBehavior' in document.documentElement.style
+};
+
+/**
+ * Browser Detection
+ */
+const BrowserDetection = {
+  isIE: () => navigator.userAgent.indexOf('MSIE') !== -1 || navigator.userAgent.indexOf('Trident/') !== -1,
+  isEdge: () => navigator.userAgent.indexOf('Edge/') !== -1,
+  isSafari: () => /^((?!chrome|android).)*safari/i.test(navigator.userAgent),
+  isFirefox: () => navigator.userAgent.indexOf('Firefox') !== -1,
+  isChrome: () => navigator.userAgent.indexOf('Chrome') !== -1 && navigator.userAgent.indexOf('Edge/') === -1,
+  isMobile: () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+};
+
+/**
+ * Apply browser compatibility fixes
+ */
+function initializeBrowserCompatibility() {
+  // Add browser classes to body
+  const body = document.body;
+
+  if (BrowserDetection.isIE()) body.classList.add('browser-ie');
+  if (BrowserDetection.isEdge()) body.classList.add('browser-edge');
+  if (BrowserDetection.isSafari()) body.classList.add('browser-safari');
+  if (BrowserDetection.isFirefox()) body.classList.add('browser-firefox');
+  if (BrowserDetection.isChrome()) body.classList.add('browser-chrome');
+  if (BrowserDetection.isMobile()) body.classList.add('device-mobile');
+
+  // CSS Grid fallback
+  if (!FeatureDetection.cssGrid()) {
+    body.classList.add('no-css-grid');
+    console.log('CSS Grid not supported, adding fallback class');
+  }
+
+  // Intersection Observer fallback
+  if (!FeatureDetection.intersectionObserver()) {
+    setTimeout(() => {
+      const animatedElements = document.querySelectorAll('.animate-on-scroll');
+      animatedElements.forEach(element => element.classList.add('animated'));
+    }, 100);
+  }
+
+  // Show legacy browser warning
+  if (BrowserDetection.isIE()) {
+    showLegacyBrowserWarning();
+  }
+
+  console.log('Browser compatibility initialized for:', {
+    browser: {
+      isIE: BrowserDetection.isIE(),
+      isEdge: BrowserDetection.isEdge(),
+      isSafari: BrowserDetection.isSafari(),
+      isFirefox: BrowserDetection.isFirefox(),
+      isChrome: BrowserDetection.isChrome()
+    },
+    features: {
+      cssGrid: FeatureDetection.cssGrid(),
+      cssVariables: FeatureDetection.cssVariables(),
+      intersectionObserver: FeatureDetection.intersectionObserver()
+    }
+  });
+}
+
+/**
+ * Show legacy browser warning
+ */
+function showLegacyBrowserWarning() {
+  const warningHTML = `
+    <div id="browser-warning" style="position: fixed; top: 0; left: 0; right: 0; background: #f8d7da; color: #721c24; padding: 15px; text-align: center; z-index: 9999; border-bottom: 1px solid #f5c6cb;">
+      <strong>Browser Update Recommended:</strong> 
+      For the best experience, please consider updating to a modern browser like 
+      <a href="https://www.google.com/chrome/" target="_blank">Chrome</a>, 
+      <a href="https://www.mozilla.org/firefox/" target="_blank">Firefox</a>, or 
+      <a href="https://www.microsoft.com/edge" target="_blank">Edge</a>.
+      <button onclick="document.getElementById('browser-warning').style.display='none'" 
+              style="margin-left: 15px; padding: 5px 10px; background: #721c24; color: white; border: none; cursor: pointer;">
+        Dismiss
+      </button>
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML('afterbegin', warningHTML);
+  document.body.style.paddingTop = '60px';
+}
+
+/* ===== PERFORMANCE FEATURES ===== */
+/* (Previously in performance.js) */
+
+/**
+ * Performance monitoring
+ */
+const PerformanceMonitor = {
+  start: performance.now(),
+
+  logMetric(name, value) {
+    console.log(`Performance: ${name} - ${value.toFixed(2)}ms`);
+  },
+
+  measurePageLoad() {
+    window.addEventListener('load', () => {
+      const loadTime = performance.now() - this.start;
+      this.logMetric('Page Load Time', loadTime);
+    });
+  }
+};
+
+/**
+ * Enhanced lazy loading for images
+ */
+function initializeImageLazyLoading() {
+  const lazyImages = document.querySelectorAll('img[data-src]');
+
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+          img.classList.add('loaded');
+          imageObserver.unobserve(img);
+        }
+      });
+    }, { rootMargin: '50px 0px' });
+
+    lazyImages.forEach(img => imageObserver.observe(img));
+  } else {
+    // Fallback for older browsers
+    lazyImages.forEach(img => {
+      img.src = img.dataset.src;
+      img.classList.remove('lazy');
+      img.classList.add('loaded');
+    });
+  }
+}
+
+/**
+ * Initialize performance features
+ */
+function initializePerformanceFeatures() {
+  PerformanceMonitor.measurePageLoad();
+  initializeImageLazyLoading();
+
+  // Preload critical resources
+  const criticalImages = ['images/gallery/hero-artwork.jpg'];
+  criticalImages.forEach(src => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = src;
+    document.head.appendChild(link);
+  });
+
+  console.log('Performance features initialized');
+}
+
+// Export for external use
+window.GalleryApp = {
+  FeatureDetection,
+  BrowserDetection,
+  PerformanceMonitor,
+  Device,
+  Storage
+};
