@@ -379,15 +379,6 @@ a:hover {
   padding: var(--spacing-xs);
 }
 
-.hamburger-line {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: var(--color-accent-primary);
-  margin: 5px 0;
-  transition: var(--transition-fast);
-}
-
 .mobile-menu {
   display: none;
   position: absolute;
@@ -407,6 +398,11 @@ a:hover {
   display: block;
   padding: var(--spacing-sm) var(--spacing-md);
   border-bottom: 1px solid var(--color-border);
+}
+
+.menu-icon {
+  font-size: 2rem;
+  color: var(--color-accent-primary);
 }
 
 /* ===== ENHANCED NAVIGATION FEATURES ===== */
@@ -504,27 +500,6 @@ a:hover {
   transform: scale(1.1);
 }
 
-.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -6px);
-}
-
-.hamburger-line {
-  width: 25px;
-  height: 3px;
-  background-color: var(--color-accent-primary);
-  margin: 3px 0;
-  transition: all var(--transition-fast);
-  border-radius: 2px;
-}
-
 /* Navigation Accessibility Improvements */
 .nav-link:focus {
   outline: 2px solid var(--color-accent-primary);
@@ -541,6 +516,7 @@ a:hover {
 /* ===== HERO SECTION ===== */
 .hero-section {
   background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+  margin-top: var(--spacing-xl);
 }
 
 .hero-content {
@@ -1531,9 +1507,9 @@ a:hover {
 
 /* ===== BACK TO TOP BUTTON ===== */
 .back-to-top {
-  position: fixed;
-  bottom: var(--spacing-lg);
-  right: var(--spacing-lg);
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
   background-color: var(--color-accent-primary);
   color: white;
   border: none;
@@ -1544,8 +1520,14 @@ a:hover {
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all var(--transition-normal);
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+/* Ensure .back-to-top is positioned relative to the footer */
+.footer {
+  position: relative;
 }
 
 .back-to-top.visible {
@@ -2849,24 +2831,32 @@ html {
 .award-icon {
   font-size: 3rem;
   margin-bottom: var(--spacing-sm);
+  color: var(--color-accent-gold);
 }
 
 .award-title {
   font-size: var(--font-size-h3);
   color: var(--color-accent-primary);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  z-index: 1;
 }
 
 .award-organization {
   font-weight: 600;
   color: var(--color-text-primary);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  z-index: 1;
 }
 
 .award-year {
   color: var(--color-accent-gold);
   font-weight: 500;
   margin-bottom: var(--spacing-sm);
+  position: relative;
+  z-index: 1;
+  clear: both;
 }
 
 .award-description {
@@ -4542,31 +4532,3 @@ html {
   pointer-events: none;
   opacity: 0.6;
 }
-
-   / *   = = = = =   S I M P L I F I E D   S T Y L E S   = = = = =   * /     / *   B a s i c   f o r m   e r r o r   s t y l i n g   * /     . e r r o r    {
-           b o r d e r - c o l o r :    # e 7 4 c 3 c    ! i m p o r t a n t ;
-           b a c k g r o u n d - c o l o r :    # f d f 2 f 2    ! i m p o r t a n t ;
-       
-}
-
-         / *   B a c k   t o   t o p   b u t t o n   * /     . b a c k - t o - t o p    {
-           p o s i t i o n :    f i x e d ;
-           b o t t o m :    2 0 p x ;
-           r i g h t :    2 0 p x ;
-           w i d t h :    5 0 p x ;
-           h e i g h t :    5 0 p x ;
-           b a c k g r o u n d :    v a r ( - - c o l o r - a c c e n t - p r i m a r y ) ;
-           c o l o r :    w h i t e ;
-           b o r d e r :    n o n e ;
-           b o r d e r - r a d i u s :    5 0 % ;
-           c u r s o r :    p o i n t e r ;
-           d i s p l a y :    n o n e ;
-           z - i n d e x :    1 0 0 0 ;
-           f o n t - s i z e :    1 8 p x ;
-           t r a n s i t i o n :    b a c k g r o u n d - c o l o r   0 . 3 s   e a s e ;
-       
-}
-
-         . b a c k - t o - t o p : h o v e r    {
-           b a c k g r o u n d :    v a r ( - - c o l o r - a c c e n t - g o l d ) ;
-       

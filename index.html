@@ -22,10 +22,21 @@
     />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/icons/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- Header & Navigation -->
@@ -70,9 +81,7 @@
               aria-label="Toggle mobile menu"
               aria-expanded="false"
             >
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
+              <i class="menu-icon fas fa-bars"></i>
             </button>
           </div>
 
@@ -335,10 +344,11 @@
           </p>
         </div>
       </div>
+      <!-- Back to Top Button (moved inside footer for bottom-right placement) -->
+      <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+      </button>
     </footer>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" aria-label="Back to top">↑</button>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
