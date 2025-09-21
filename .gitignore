@@ -5,3 +5,6 @@ PLANNING_DOCUMENT.md
 vscode/
 .idea/
 art-gallery.code-workspace
+
+# Ignore GitHub configuration files
+.github/

@@ -1,90 +1,98 @@
-# 📦 Final Assignment: Build, Organize, and Deploy a Multipage Website
+# Lumina Gallery
 
-You're now ready to bring everything together—HTML, CSS, JavaScript, planning, structure, and deployment. This final project challenges you to **conceptualize, build, and deploy a multi-page website** that is responsive, interactive, and ready for the real world.
+A contemporary art gallery website built as a final project for the PLP Web Technologies course. This static site showcases modern artworks, exhibitions, and artist information in a responsive, accessible, and visually engaging format.
 
-This assignment will guide you from planning your site all the way to deploying it online. Let’s make your project *production-worthy*! 🚀
+## Table of Contents
 
----
-
-## 🌐🎯 Part 1: Planning and Organizing a Multipage Website
-
-Before you write any code, take time to plan:
-
-* Define your website's purpose (portfolio, product showcase, blog, etc.)
-* Outline 3–5 pages (e.g., Home, About, Services, Contact, Gallery)
-* Sketch or describe the layout of each page
-* Map out internal navigation (how pages link to one another)
-
-**Goal:** Show intentional structure and user journey across the site.
+- [Live Demo](#live-demo)
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [File Structure](#file-structure)
+- [Design System](#design-system)
+- [Navigation](#navigation)
+- [How to Use](#how-to-use)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
 ---
 
-## 🌍💻 Part 2: Build the Website Using HTML5, CSS, and JavaScript
+## Live Demo
 
-Using your plan, begin building:
-
-* Use HTML5 for semantic structure
-* Apply CSS for responsive layout, styling, and animations
-* Use JavaScript to add interactivity (menus, forms, toggles, dynamic content)
-
-Each page should:
-
-* Be mobile-responsive
-* Share a consistent layout/header/footer
-* Include at least one interactive element (e.g., form validation, toggle menu, animation on scroll)
-
-**Goal:** Integrate everything you’ve learned in a cohesive, functioning project.
+[https://luminaart.netlify.app/](https://luminaart.netlify.app/)
 
 ---
 
-## 🛠️🚀 Part 3: Best Practices for Code Organization
+## Project Overview
 
-Before deployment, refactor your project to follow production-friendly practices:
+**Lumina Gallery** is a 5-page static website designed to demonstrate best practices in HTML, CSS, and JavaScript for educational deployment. The site highlights contemporary art, current and upcoming exhibitions, and provides contact information for visitors.
 
-* Organize files in folders (`/css`, `/js`, `/images`, etc.)
-* Write clean, modular, and commented code
-* Use meaningful file names and relative paths
-* Validate your HTML/CSS and test on different screen sizes
+## Features
 
-**Goal:** Prepare your codebase to be readable, maintainable, and scalable.
+- Multipage static site (Home, Gallery, Exhibitions, About, Contact)
+- Responsive, mobile-first layout
+- Dual navigation (desktop and mobile overlay)
+- CSS custom properties for theming
+- Semantic HTML5 and accessibility best practices
+- Simple, maintainable vanilla JavaScript for interactivity
+- Organized asset management (images, CSS, JS)
+
+## File Structure
+
+```
+/                    # Root: index.html and main assets
+├── css/style.css    # Single consolidated stylesheet
+├── js/main.js       # Main JavaScript (mobile nav, events)
+├── pages/           # All subpages (gallery, exhibitions, about, contact)
+├── assets/images/   # Images organized by content type
+│   ├── gallery/     # Gallery artworks
+│   ├── exhibitions/ # Exhibition images
+│   └── icons/       # Icons and favicon
+```
+
+- **Critical Path:** Subpages use `../` for all asset and navigation links. Root uses direct paths.
+- **Image Naming:** Descriptive, organized by section (e.g., `gallery-founder.jpg`, `artwork-1.jpg`).
+
+## Design System
+
+- **Colors:** Warm whites, charcoal text, gold accents (see `:root` in `css/style.css`)
+- **Typography:**
+  - Headings: `Playfair Display`
+  - Body: `Source Sans Pro`
+- **Layout:**
+  - Mobile-first, responsive with CSS Grid/Flexbox
+  - Fixed header (80px body padding-top)
+- **Class Naming:** BEM-influenced and semantic (e.g., `.nav-menu`, `.gallery-grid`, `.active`)
+
+## Navigation
+
+- **Desktop:** Horizontal `.nav-menu`
+- **Mobile:** Overlay `.mobile-menu` with hamburger toggle
+- **Active State:** Class-based highlighting for current page
+- **Brand:** `Lumina Gallery` logo always links to root
+
+## How to Use
+
+1. **Open `index.html`** in your browser to view the homepage.
+2. **Navigate** using the menu to explore gallery, exhibitions, about, and contact pages.
+3. **Mobile Navigation:** Tap the hamburger icon to open/close the mobile menu.
+4. **Edit Content:**
+   - Update images in `assets/images/`
+   - Edit text and structure in HTML files
+   - Adjust styles in `css/style.css`
+   - Update interactivity in `js/main.js`
+
+## Deployment
+
+- This is a static site. Deploy by uploading all files to any static web host (e.g., GitHub Pages, Netlify, Vercel).
+- No build tools or package managers required.
+- Ensure all relative paths are preserved when deploying subpages.
+
+## Credits
+
+- Project by [Mayen007] for PLP Web Technologies Final Project
+- Fonts: [Google Fonts](https://fonts.google.com/)
+- Images: Provided for educational use only
 
 ---
 
-## 🌐🚀 Part 4: Introduction to Hosting and Deployment
-
-Once your project is complete, choose a method to **host your site online**.
-
-You can use:
-
-* **GitHub Pages** (great for portfolios and static sites)
-* **Netlify** (powerful CI/CD features and easy form support)
-* **Vercel** (lightning-fast deployment for frontend projects)
-
-Deploy your project and confirm that:
-
-* All links and scripts work
-* It loads properly on mobile and desktop
-* It has a clear, shareable URL
-
-**Goal:** Publish your work online and make it accessible to the world.
-
----
-
-## Deliverables
-
-1. A GitHub repository containing:
-
-   * Your complete project code, properly organized
-   * A `README.md` file explaining your project purpose, structure, and live URL
-2. A live deployed website (hosted via GitHub Pages, Netlify, or Vercel)
-
----
-
-## Outcome
-
-* Clarity and thoroughness of planning documentation
-* Proper use of HTML5, CSS, and JavaScript across multiple pages
-* Responsive and accessible design
-* Clean, well-organized, and commented code
-* Successful live deployment with a working link
-* Evidence of following best practices
+For questions or feedback, please contact the project maintainer.
